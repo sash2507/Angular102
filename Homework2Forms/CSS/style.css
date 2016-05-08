@@ -1,0 +1,38 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Century Gothic', sans-serif;
+}
+
+.high-priority {
+	color: red;
+}
+
+.medium-priority {
+	color: orange;
+}
+
+.low-priority {
+	color: green;
+}
+
+.add-toDoButton {
+	width: 100px;
+	height: 35px;
+	border: 2px solid black;
+	border-radius: 10px;
+	background-color: yellow;
+	font-size: 1em;	
+}
+
+.enter-input {
+	width: 300px;
+	height: 50px;
+	border: 2px solid black;
+	border-radius: 10px;
+	padding: 10px;
+	font-size: 1.1em;
+}
+

@@ -1,0 +1,15 @@
+Lesson 4 covered Angular custom services.
+
+- Initial part of class was a recap of Lesson 3:
+	- overview of constructor and prototype functions: reviewed the "Car" factory/prototype as a way to create objects/classes
+	- discussed why/when to use constructor function
+
+- The second part of class covered how to incorporate constructor/prototype into the Angular app - i.e. "custom services"
+	- How module and service are linked (dependency injection)
+	- Looked at two ways: either using a pre-existing module or a new module
+	- Discussed use of .service (either to define "utility functions", or to share info across multiple controllers)
+	- Learned how to build .service functions
+	- Learned about .value
+	- Discussed return values of .factory/.service/.value in reference to the controller
+
+- The last part was an in-class workshop (to be turned in as HW) to build a student report card app.

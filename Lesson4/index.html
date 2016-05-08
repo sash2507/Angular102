@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lesson 4</title>
+	<link rel="stylesheet" href="CSS/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src="JS/main.js"></script>
+</head>
+
+<body ng-app="MyModule">
+
+	<div ng-controller="MyController as ctrl">
+		<!-- Makes name display and countdown -->
+		<h1>Countdown/Name Display</h1>
+		Countdown: <h3 ng-bind="ctrl.count"></h3>
+		<h3 ng-bind="ctrl.name"></h3>
+
+		<h1>Car Info</h1>
+			<div>
+				Make: <input type="text" ng-model="ctrl.car.make">
+			</div>
+			
+			<div>
+				Model: <input type="text" ng-model="ctrl.car.model">
+			</div>
+
+			<div>
+			<!-- ng-change works like ng-click -->
+			Year: <input type="text" ng-model="ctrl.car.year" ng-change="ctrl.onYearChanged()">
+			</div>
+			
+			<div>
+				Age: <span ng-bind="ctrl.car.age"></span>
+			</div>
+
+		
+
+		<!-- <div>Age: <span ng-bind="ctrl.car.age"></span></div> -->
+		<!-- <div>Needs Repair: <span ng-bind="ctrl.car.needsRepair()"></span></div>
+ --> 
+	
+		<!-- <div ng-repeat="color in ctrl.myColors">
+			<div ng-bind="color.name"></div>
+		</div>
+
+		<div ng-controller="AuxiliaryController as auxCtrl"></div>
+		<h3>Aux Controller</h3>
+		<button ng-click="auxCtrl.popElement()">Pop</button>
+ -->
+</body>
+</html>

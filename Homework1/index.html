@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homework1 - UI Theme Picker</title>
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="CSS/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src="JS/main.js"></script>
+	
+</head>
+
+<body ng-app="MyModule">
+	<div ng-controller="MyController as ctrl">
+
+	<!-- Container div for body -->
+		<div class="defaultBody" ng-class="ctrl.colorSelected[0]" ng-init="ctrl.colorSelected=ctrl.defaultTheme">	
+			<!-- Five input radio buttons -->
+			<div id="radio-buttons" ng-init="">
+				<input type="radio" 
+					name="color" 
+					ng-model="ctrl.colorSelected" 
+					checked="checked"
+					ng-value="ctrl.defaultTheme">Default
+
+				<input type="radio" 
+					name="color" 
+					ng-model="ctrl.colorSelected" 
+					ng-value="ctrl.redTheme">Red
+				
+				<input type="radio" 
+					name="color" 
+					ng-model="ctrl.colorSelected" 
+					ng-value="ctrl.pinkTheme">Pink
+				
+				<input type="radio" 
+					name="color" 
+					ng-model="ctrl.colorSelected" 
+					ng-value="ctrl.orangeTheme">Orange
+
+				<input type="radio" 
+					name="color" 
+					ng-model="ctrl.colorSelected" 
+					ng-value="ctrl.yellowTheme">Yellow
+			</div>
+
+			<!-- Boxes -->
+			<div class="defaultBox" ng-class= "ctrl.colorSelected[1]">
+			<p ng-class="ctrl.colorSelected[3]">Letterpress craft beer typewriter, bitters butcher ennui heirloom celiac. Four dollar toast pork belly 8-bit trust fund, raw denim letterpress shoreditch stumptown food truck locavore venmo typewriter blog. Post-ironic chambray lumbersexual, fashion axe hoodie kitsch swag yuccie organic. DIY hoodie lomo, austin post-ironic literally portland shoreditch pour-over neutra sriracha YOLO selvage thundercats messenger bag.</p>
+			</div>
+
+			<div class="defaultBox" ng-class="ctrl.colorSelected[2]">
+			<p ng-class="ctrl.colorSelected[3]">Tumblr hammock authentic, humblebrag pitchfork ramps listicle cliche distillery ethical 8-bit vice. 3 wolf moon whatever direct trade fanny pack franzen, swag polaroid austin letterpress. Street art health goth everyday carry heirloom hoodie echo park gluten-free irony, viral venmo brunch vegan pop-up. Man braid listicle food truck, fashion axe austin polaroid pop-up shoreditch post-ironic scenester jean shorts synth.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homework 2-To Do List</title>
+	<link rel="stylesheet" href="CSS/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src="JS/main.js"></script>
+</head>
+
+<body ng-app="MyModule">
+	<!-- Forms -->
+	<div ng-controller="MyController as ctrl2">
+	<div ng-bind="ctrl2.greeting"></div>
+	<h2>Form</h2>
+		<form>
+			Name: <input class="enter-input" type="text" placeholder="Enter task name" ng-model="ctrl2.toDoName">
+			Description: <input class="enter-input" type="text" placeholder="Enter a description" ng-model="ctrl2.toDoDescription"><br>
+			Priority: 
+			<div>
+				<input type="radio" ng-model="ctrl2.color" value="high-priority">High
+				<input type="radio" ng-model="ctrl2.color" value="medium-priority">Medium
+				<input type="radio" ng-model="ctrl2.color" value="low-priority">Low
+			</div><br>
+			<button class="add-toDoButton" ng-click="ctrl2.addToDo()">Add To-Do</button>
+		</form>
+		
+		<h3>To Do List</h3>
+		<ul>
+			<li ng-repeat="todo in ctrl2.toDos" ng-class="todo.priority">
+				<div>
+					<span>Item {{$index + 1}}</span><br>
+					<span ng-bind="'Name: ' + todo.name"></span><br>
+					<span ng-bind="'Description: ' + todo.description"></span>
+				</div>
+			</li>
+		</ul>
+
+	</div>
+	
+</body>
+</html>

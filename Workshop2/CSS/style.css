@@ -1,0 +1,36 @@
+* {
+	box-sizing: border-box;
+}
+
+h1 {
+	color: #1269A2;
+}
+
+h3, h4 {
+	font-size: 1.2em;
+}
+
+input {
+	height: 45px;
+	border: 2px solid orange;
+	width: 250px;
+	font-size: 1.25em;
+	padding: 10px;
+}
+
+.name-input {
+	width: 500px;
+}
+
+button {
+	height: 35px;
+	width: 90px;
+	background-color: #1269A2;
+	color: white;
+	font-size: 1.5em;
+}
+
+body {
+	font-family: arial;
+}
+

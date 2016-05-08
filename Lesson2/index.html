@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Day One</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src="JS/main.js"></script>
+	<style type=text/css>
+		.box {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+		.white {
+			color: white;
+		}
+		.green {
+			color: green;
+		}
+		.yellow {
+			color: yellow;
+		}
+		.strong {
+			font-weight: bold;
+		}
+	</style>
+
+</head>
+
+<body ng-app="MyModule">
+	<h2>Hello world!</h2>
+	<!-- This creates an alias "ctrl" -->
+	<div ng-controller="MyController as ctrl">
+		<!-- Binding is the thing you want to display -->
+		<div ng-bind="ctrl.greeting"></div>
+		<div ng-bind="ctrl.age"></div>
+		<div ng-bind="ctrl.hobby"></div>
+
+		<!-- <h3>Simple Array</h3> -->
+		<!-- Have to use "in", name can be any variable name you want, represents each item in array -->
+
+<!-- *******ng-repeat with an array******** -->
+	<!-- 	<div ng-repeat="name in ctrl.myArray"> -->
+			<!-- This displays it -->
+			<!-- <label ng-bind="name"></label>
+		</div> -->
+		
+<!-- ********ng-repeat with an array of objects****** -->
+	<!-- <div ng-repeat="person in ctrl.myArray">
+			Person #{{ $index + 1 }}; -->
+			<!-- This displays it -->
+			<!-- <label ng-bind="person.firstName"></label>			
+		</div>
+	 -->
+<!-- *********ng-repeat with an object******* -->
+	<!-- 	<h3>ng-repeat with an object</h3>
+		<div ng-repeat="(key, value) in ctrl.myArray"> -->
+			<!-- This displays it -->
+		<!-- 	<label ng-bind="key"></label>: <span ng-bind="value"></span>	
+		</div> -->
+		
+	<!-- *******ng-model with input type TEXT****** -->
+		<!-- whatever user types, ng-model connects them to variable controller "myName" -->
+			<h3>Text input</h3>
+			<input type="text" ng-model="ctrl.myName">
+			<label ng-bind="ctrl.myName"></label>
+
+			<div class="box" ng-class="ctrl.myName">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed blanditiis repellendus laborum repudiandae labore quisquam debitis tempore quae quod quia esse, voluptates rem excepturi at est suscipit rerum quidem consequatur.
+			</div>
+		<!-- *******ng-model with input type RADIO****** -->
+		<h3>Radio Button</h3>
+			<input type="radio" 
+			name="pet" 
+			ng-model="ctrl.petSelected" 
+			ng-value="ctrl.myDog">Dog
+			<input type="radio" 
+			name="pet" 
+			ng-model="ctrl.petSelected" 
+			ng-value="ctrl.myCat">Cat
+			<input type="radio" 
+			name="pet" 
+			ng-model="ctrl.petSelected" 
+			ng-value="ctrl.myPig">Pig
+			<div>
+				<label>Selected Pet:</label><span ng-bind="ctrl.petSelected.name"></span>
+			</div>
+
+
+	</div>
+
+</body>
+
+</html>

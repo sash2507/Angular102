@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Workshop In class</title>
+	<link rel="stylesheet" href="CSS/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src="JS/main.js"></script>
+</head>
+
+<body ng-app="MyModule">
+	<div ng-controller="MyController as ctrl">
+		<h3>User Profile Page</h3>
+		<div ng-hide="ctrl.isEditClicked">
+			<div>First Name: <span ng-bind="ctrl.firstName"></span></div>
+			<div>Last Name: <span ng-bind="ctrl.lastName"></span></div>
+			<div>Email: <span ng-bind="ctrl.email"></span></div>
+			<button ng-click="ctrl.onEditClick()">Edit</button>
+		</div>
+
+		<div ng-show="ctrl.isEditClicked">
+
+			<input type="text" ng-model="ctrl.firstInput" >First Name:
+			<input type="text" ng-model="ctrl.lastInput" >Last Name: 
+			
+			<button ng-click="ctrl.doneEdit()">Done</button>
+			<button ng-click="ctrl.cancelEdit()">Cancel</button>
+			
+		</div>
+		
+		
+
+</body>
+</html>

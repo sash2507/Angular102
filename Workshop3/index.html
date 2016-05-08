@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Workshop 3 - Music Playlist Generator</title>
+	<link rel="stylesheet" href="CSS/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src="JS/main.js"></script>
+	<script src="JS/services.js"></script>
+</head>
+
+<body ng-app="MyModule">
+	<div ng-controller="MyController as ctrl">
+		<h1>Music Playlist Generator</h1>
+		User Name: <input type="text" ng-model="ctrl.username">
+		Age: <input type="text" ng-model="ctrl.age">
+		Explicit? <input type="checkbox" 
+		ng-disabled="ctrl.age < 18">
+
+		<div ng-repeat="songGenre in ctrl.musicPlaylist.copyPlayList">
+			<input type="radio" ng-model="ctrl.songInfo" ng-value="songGenre.songs" ng-click="ctrl.genreRadioButton()"><span ng-bind="songGenre.genre"></span>
+		</div>
+		
+		<h4>Select your songs</h4>
+		
+		<div ng-repeat="songObject in ctrl.songList">
+			<input type="checkbox" ng-model="songObject.isCheckboxChecked">
+			<span ng-bind="songObject.artist + ' - '"></span>
+			<span ng-bind="songObject.song"></span>
+		</div>
+
+		<button class="save-button" ng-click="ctrl.savePlayList()">Save Playlist</button><br>
+		<span ng-bind="ctrl.abc"></span>
+
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homework 2-Folders</title>
+	<link rel="stylesheet" href="CSS/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src="JS/main.js"></script>
+</head>
+
+<body ng-app="MyModule">
+	<div ng-controller="MyController as ctrl">	
+
+	<h2>Folders</h2>
+	<!-- Checkbox unchecked on page load -->
+	<input type="checkbox" ng-model="ctrl.isBoxChecked">Expand All
+	
+	<div>
+		<ul>
+			<!-- 'findFolder' parses parent array fileNames -->
+			<li ng-repeat="findFolder in ctrl.fileNames">
+				<!-- Displays folder name -->
+				<span ng-bind="findFolder.folderName"></span>
+				<ul>
+					<!-- 'findFile' parses nested array filesInFolder, and shows when checkbox is checked -->
+					<li ng-show="ctrl.isBoxChecked" ng-repeat="findFile in findFolder.filesInFolder">
+						<!-- Displays file name -->
+						<span ng-bind="findFile.text"></span>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		
+		<h4>Pick a folder</h4>
+		<div ng-show="ctrl.isFilesBoxChecked">
+			<div ng-repeat="findFolder in ctrl.fileNames">
+				<!--ng-value is the index of ng-repeat (findFolder)-->
+				<input class="radio-button" type="radio" ng-model="ctrl.addFiles" ng-value="findFolder">
+				<!--findFolder.text is name of file entered-->
+				<span ng-bind="findFolder.folderName"></span>
+			</div>
+			<!--file name (i.e.'text') gets pushed onto ng-model (i.e.'inputFiles')-->
+			<input class="enter-input" type="text" ng-model="ctrl.inputFiles" placeholder="Enter a file name">
+			<!-- addFilesToFolders runs on ng-click -->
+			<button class="add-button" ng-click="ctrl.addFilesToFolders()">Add File</button>
+		</div>
+	</div>
+	</div>
+
+<!-- Part 2-->
+	<!-- Forms -->
+<!-- 	<div ng-controller="MyController as ctrl2">
+	<h2>Form</h2>
+		<form>
+			Name: <input class="enter-input" type="text" placeholder="Enter task name" ng-model="ctrl2.toDoName">
+			Description: <input class="enter-input" type="text" placeholder="Enter a description" ng-model="ctrl2.toDoDescription"><br>
+			Priority: 
+			<div>
+				<input type="radio" ng-model="ctrl2.color" value="high-priority">High
+				<input type="radio" ng-model="ctrl2.color" value="medium-priority">Medium
+				<input type="radio" ng-model="ctrl2.color" value="low-priority">Low
+			</div><br>
+			<button class="add-button" ng-click="ctrl2.addToDo()">Add To-Do</button>
+		</form>
+		
+		<h3>To Do List</h3>
+		<ul>
+			<li ng-repeat="todo in ctrl2.toDos" ng-class="todo.priority">
+				<div>
+					<span>Item {{$index + 1}}</span><br>
+					<span ng-bind="'Name: ' + todo.name"></span><br>
+					<span ng-bind="'Description: ' + todo.description"></span>
+				</div>
+			</li>
+		</ul>
+	</div> -->
+</body>
+</html>

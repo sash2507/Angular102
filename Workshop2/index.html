@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Workshop 2 - Student Report Card</title>
+	<link rel="stylesheet" href="CSS/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src="JS/main.js"></script>
+	<script src="JS/services.js"></script>
+
+</head>
+<body ng-app="MyModule">
+	<div ng-controller="MyController as ctrl">
+		
+		<h1>Student Report Card</h1>
+		<p>Student Name</p>
+		<input class="name-input" type="text">
+
+		<div>
+			<br>
+			<h3>Assignment Information</h3>
+			Name <input type="text" ng-model="ctrl.assignmentName">
+			Grade (/100) <input type="number" ng-model="ctrl.assignmentGrade">
+			<button ng-click="ctrl.pushAssignment(); ctrl.displayReportCard()">Add</button>
+		</div>
+
+		<div>
+			<h4>Assignments List</h4>
+			<ul>
+				<li ng-repeat="assignment in ctrl.reportCard.assignmentInfo">
+					<span>Assignment {{$index + 1}}</span><br>
+					<span ng-bind="'Name: ' + assignment.name"></span><br>
+					<span ng-bind="'Grade: ' + assignment.grade"></span>
+				</li>
+			</ul>
+		</div>
+
+		<div>
+			<h4>Student Info</h4>
+			<span ng-bind="ctrl.calcAvg"></span>
+			<span ng-bind="ctrl.letterGrade"></span>
+			<span ng-bind="ctrl.passOrFail"></span>
+		</div>
+	</div>
+	
+</body>
+</html>

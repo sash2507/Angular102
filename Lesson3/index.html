@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Day 3</title>
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="CSS/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src="JS/main.js"></script>
+</head>
+
+<body ng-app="MyModule">
+	<div ng-controller="MyController as ctrl">
+		<h3>Check Boxes</h3>
+		<!-- Checkbox -->
+		<input type="checkbox" ng-model="ctrl.isBoxChecked">
+		
+		<!-- Using ng bind to make words "true" or "false" appear -->
+		<div ng-bind="ctrl.isBoxChecked"></div>
+
+		<!-- ng-show shows stuff if isBoxChecked is true - CSS property changes-->
+		<div ng-show="ctrl.isBoxChecked" class="redText">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam fugit repellat ducimus similique nostrum, optio veniam deleniti veritatis, quaerat recusandae id sit expedita dignissimos eaque doloremque laborum excepturi nulla sunt.</p>
+		</div>
+		<!-- ng-hide will hide if isBoxChecked is true -->
+		<div ng-hide="ctrl.isBoxChecked" class=
+		"greenText">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam fugit repellat ducimus similique nostrum, optio veniam deleniti veritatis, quaerat recusandae id sit expedita dignissimos eaque doloremque laborum excepturi nulla sunt.</p>
+		</div>
+
+		<!-- ng-if -->
+			<!-- ng-if doesn't change CSS property (like ng-show), it takes entire div out of DOM - less efficient -->
+		<div ng-if="ctrl.isBoxChecked" class="redText">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam fugit repellat ducimus similique nostrum, optio veniam deleniti veritatis, quaerat recusandae id sit expedita dignissimos eaque doloremque laborum excepturi nulla sunt.</p>
+		</div>
+
+		<!-- ng-click -->
+		<!-- Takes a function, not a value. Can be applied to any html element -->
+		<button ng-click="ctrl.onUserClick()">Toggle check button</button>
+
+		
+
+
+
+
+	
+	</div>
+</body>
+</html>

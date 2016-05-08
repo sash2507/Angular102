@@ -1,0 +1,146 @@
+#radio-buttons {
+	font-family: Arial;
+	font-size: 1.2em;
+	font-weight: bold;
+	height: 100px;
+}
+
+/*Default styling*/
+.defaultBody {
+	width: 100%;
+	height: 100vh;
+	background-color: lightgrey;
+	text-align: justify;
+}
+
+.defaultDivOne, .defaultDivTwo {
+	width: 600px;
+	height: 130px;
+	margin: 50px;
+	margin-left: 350px;
+	padding: 25px;
+	background-color: lightyellow;
+	text-align: justify;
+}
+
+/*Define additional classes for body, boxes and text - corresponding to input button*/
+.bodyRed {
+	height: 100vh;
+	background-color: #A02422;
+}
+.bodyPink {
+	height: 100vh;
+	background-color: #FFC9C6;
+}
+.bodyOrange {
+	height: 100vh;
+	background-color: #FFF2C0; 
+}
+.bodyYellow {
+	height: 100vh;
+	background-color: #FFEB88;
+}
+
+/*Boxes (divs) 1 and 2*/
+.divOneRed {
+	background-color: #FDF7EF;
+	border-radius: 20px;
+	width: 600px;
+	height: 130px;
+	margin: 50px;
+	margin-left: 350px;
+	padding: 25px;
+	text-align: justify;
+}
+.divOnePink {
+	background-color: #221F1F;
+	border-radius: 20px;
+	width: 600px;
+	height: 130px;
+	margin: 50px;
+	margin-left: 350px;
+	padding: 25px;
+	text-align: justify;
+}
+.divOneOrange {
+	background-color: #FF7400;
+	border-radius: 20px;
+	width: 600px;
+	height: 130px;
+	margin: 50px;
+	margin-left: 350px;
+	padding: 25px;
+	text-align: justify;
+}
+.divOneYellow {
+	background-color: #FDD200;
+	border-radius: 20px;
+	width: 600px;
+	height: 130px;
+	margin: 50px;
+	margin-left: 350px;
+	padding: 25px;
+	text-align: justify;
+}
+.divTwoRed {
+	background-color: #FFCCCC;
+	border-radius: 20px;
+	width: 600px;
+	height: 130px;
+	margin: 50px;
+	margin-left: 350px;
+	padding: 25px;
+	text-align: justify;
+}
+.divTwoPink {
+	background-color: #221F1F;
+	border-radius: 20px;
+	width: 600px;
+	height: 130px;
+	margin: 50px;
+	margin-left: 350px;
+	padding: 25px;
+	text-align: justify;
+}
+.divTwoOrange {
+	background-color: #FFA500;
+	border-radius: 20px;
+	width: 600px;
+	height: 130px;
+	margin: 50px;
+	margin-left: 350px;
+	padding: 25px;
+	text-align: justify;
+}
+.divTwoYellow {
+	background-color: #FFFFFE;
+	border-radius: 20px;
+	width: 600px;
+	height: 130px;
+	margin: 50px;
+	margin-left: 350px;
+	padding: 25px;
+	text-align: justify;
+}
+
+/*Text*/
+.textColorRed {
+	color: black;
+	font-weight: bold;
+	font-family: 'Ubuntu', sans-serif;
+}
+.textColorPink {
+	color: white;
+	font-weight: bold;
+	font-family: 'Ubuntu', sans-serif;
+}
+.textColorOrange {
+	color: #006b80;
+	font-weight: bolder;
+	font-family: 'Ubuntu', sans-serif;
+}
+.textColorYellow {
+	color: #ABA06E;
+	font-weight: bold;
+	font-family: 'Ubuntu', sans-serif;
+}

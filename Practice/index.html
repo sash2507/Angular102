@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="Eggly">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Exercise from Egghead</title>
+</head>
+
+<body ng-controller="MainCtrl">
+	<div ng-init="hello='world'">
+		<h1>{{hello}}</h1>
+		<input type="text" ng-model="hello">
+
+	<!-- <input type="text" ng-model="first.greeting">
+
+	<div ng-class="first.greeting">
+	{{ first.greeting }} {{ " World" }}
+	</div> -->
+	</div>
+	
+
+
+	<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src="app/eggly-app.start.js"></script>
+</body>
+</html>
