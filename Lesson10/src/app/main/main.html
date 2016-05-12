@@ -1,0 +1,55 @@
+<div class="container">
+  
+  <title>Forms!</title>
+
+  <h1 ng-bind="ctrl.greeting"></h1>
+
+  <button ng-click="ctrl.addBox()">Add</button>
+  <button ng-click="ctrl.removeBox()">Remove</button>
+  <div ng-repeat="box in ctrl.boxes" class="box"></div>
+
+  <form name="ctrl.myFirstForm" ng-submit="ctrl.submitForm">
+  	<!-- ng-submit is like ng-click -->
+  	<input type="checkbox" ng-model="ctrl.usernameRequired">Username Required
+  	<input type="text" 
+  			ng-model="ctrl.username" 
+  			placeholder="Username"
+  			name="usernameInput"
+  			ng-required="ctrl.usernameRequired"><br>
+  	<input type="email" 
+  			ng-model="ctrl.email"
+  			placeholder="Email"><br>
+  	<input type="text"
+  			ng-model="ctrl.phone"
+  			placeholder="Phone #"
+  			ng-pattern="/^\(\d\d\d\) \d\d\d-\d\d\d\d$/"
+  			name="phoneInput"><br>
+
+  			<div ng-show="ctrl.myForm.phoneInput.$invalid">Please enter a valid phone no matching ###-###-####</div>
+
+	<input type="submit" 
+			value="submit my form">
+  	
+<!--   	<select ng-model="ctrl.userState"
+  			ng-options="state as state for state in ctrl.states">
+  	</select><br>
+
+  	<select ng-model="ctrl.userState"
+  			ng-options="state.abbr as state.name for state in ctrl.states">
+  	</select><br> -->
+
+  	<select ng-model="ctrl.userState"
+  			ng-options="key as value for (key, value) in ctrl.states">
+  	</select><br>
+
+  	  <pre>{{ ctrl.userState | json}}</pre>
+			
+			<!--   	With ng-options, specify two things: 1) what to bind to ng-model, 2) what gets displayed on to screen -->
+
+  			<!-- ng-pattern looks for patterns
+  			can also be ng-pattern="ctrl.phoneExpression" -->
+  			<!-- The ^ means it HAS to start with a ( and $ means it has to end with a number -->
+  			<!-- The // tells it it's a regular expression -->
+  </form>
+
+</div>

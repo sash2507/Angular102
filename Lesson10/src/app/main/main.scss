@@ -1,0 +1,40 @@
+
+// $list: a b c d;
+
+// .#{$letter} means a class is being created
+// @each $letter in $list {
+// 	.#{$letter} 
+// 		margin-top: 10px;
+// 	}
+// }
+
+// .container {
+// 	.greeting {
+// 		color:red;
+// 	}
+// }
+
+.box {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	display: inline-block;
+	margin-right: 10px;
+	transition: 5s ease-in all;
+}
+.box.ng-enter {
+	opacity: 0.0;	
+	transform: translateX(-25px);
+}
+.box.ng-enter-active {
+	opacity: 1.0;
+	transform: translateX(0);
+}
+.box.ng.leave {
+	opacity: 1.0;
+	transform: translateX(-25px);
+}
+.box.ng-leave-active {
+	opacity: 0.0;
+	transform: translateX(0);
+}
